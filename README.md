@@ -3,6 +3,7 @@ Some temparary shared code
  Inpaint depth map.
  https://www.youtube.com/watch?v=u0A4OVZxzKQ
 
+```{c}
 Mat depthMat(height, width, CV_16UC1, depth); // from kinect
 Mat depthf(height, width, CV_8UC1);
 
@@ -24,6 +25,6 @@ resize(temp, temp2, depthf.size());
 temp2.copyTo(depthf, (depthf == noDepth)); // add to the original signal
 
 imshow("depth-inpaint", depthf); // show results
-
+```
 Original code adapted from:
 http://www.morethantechnical.com/2011...
